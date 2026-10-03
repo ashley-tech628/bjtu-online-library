@@ -1,0 +1,2 @@
+rootProject.name='t11-server'
+include('framework','foundation','business')

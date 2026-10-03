@@ -1,0 +1,93 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 10240MB
+      file-size-threshold: 0
+    tomcat:
+      uri-encoding: UTF-8
+      max-threads: 800
+      min-spare-threads: 30
+      max-connections: 10000
+      max-http-form-post-size: 20MB
+  address: 127.0.0.1
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/library_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC}
+    username: ${DB_USERNAME:library_demo}
+    password: ${DB_PASSWORD}
+    type: org.apache.commons.dbcp2.BasicDataSource
+    dbcp2:
+      max-wait-millis: 10000
+      min-idle: 5
+      initial-size: 5
+      validation-query: SELECT 1
+  application:
+    name: myspringboot
+mybatis:
+  mapper-locations: classpath*:mybatis/mappers/**/*Mapper.xml
+  type-aliases-package: com.bjtuwh.web
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: FULL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+jasypt:
+  encryptor:
+    password: ${JASYPT_PASSWORD}
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+apollo:
+  file:
+    handlerpath: /api/static/download/**
+    storedirectory:
+      windows: ${LIBRARY_UPLOAD_DIR:./uploads/}
+      linux: ${LIBRARY_UPLOAD_DIR:./uploads/}
+  name: demo系统
+  version: V1.0.0
+  copyright: BJTU Online Library course project
+  logoperation: false
+  logexception: false
+secure:
+  ignored:
+    urls:
+    - /favicon.ico
+    - /profile/**
+    - /druid/**
+    - /doc.html
+    - /swagger-ui/**
+    - /swagger-resources/**
+    - /webjars/**
+    - /*/api-docs
+    - /test/**
+    - /integration/**
+    - /file/**
+    - /api/upload/**
+    - /api/wecomLogin
+    - /api/login/index/**
+    - /api/login/getToken/**
+    - /api/user/login
+    - /api/authUser/create
+    - /api/authUser/update
+    - /api/authUser/relateList
+    - /api/authUserRoleRel/create
+    - /api/authUserRoleRel/relateList
+    - /api/bookshelf/create
+    - /api/bookshelf/page
+    - /api/bookLibrary/relateList
+    - /api/bookLibrary/page
+    - /api/bookshelf/relateList
+    - /api/userDetails/create
+    - /api/userDetails/relateList
+    - /api/login
+    - /api/user/logout
+    - /api/sys/file/download*
+    - /api/sys/file/showImage

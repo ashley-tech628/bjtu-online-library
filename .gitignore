@@ -1,0 +1,17 @@
+node_modules/
+.gradle/
+build/
+dist/
+out/
+target/
+.idea/
+.vscode/
+.env
+.env.local
+*.log
+uploads/
+*.class
+*.pdf
+*.docx
+*.pptx
+bookFiles/

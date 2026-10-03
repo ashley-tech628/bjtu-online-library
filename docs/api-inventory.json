@@ -1,0 +1,868 @@
+[
+  {
+    "controller": "AuthPermController",
+    "base_expression": "ControllerConstant.PREFIX + \"authPerm\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthPermManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"authPerm/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthRoleController",
+    "base_expression": "ControllerConstant.PREFIX + \"authRole\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthRoleManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"authRole/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthRolePermRelController",
+    "base_expression": "ControllerConstant.PREFIX + \"authRolePermRel\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthRolePermRelManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"authRolePermRel/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthUserController",
+    "base_expression": "ControllerConstant.PREFIX + \"authUser\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "getPerms"
+      },
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthUserManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"authUser/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "getPerms"
+      },
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthUserRoleRelController",
+    "base_expression": "ControllerConstant.PREFIX + \"authUserRoleRel\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "AuthUserRoleRelManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"authUserRoleRel/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "BasicFileController",
+    "base_expression": "ControllerConstant.PREFIX + \"basicFile\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "/getNewGroupId"
+      },
+      {
+        "method": "POST",
+        "suffix": "/upload"
+      },
+      {
+        "method": "POST",
+        "suffix": "/simpleUpload"
+      }
+    ]
+  },
+  {
+    "controller": "BasicFileManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"basicFile/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "BookLibraryController",
+    "base_expression": "ControllerConstant.PREFIX + \"bookLibrary\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "BookLibraryManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"bookLibrary/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "BookRecommendsController",
+    "base_expression": "ControllerConstant.PREFIX + \"bookRecommends\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      }
+    ]
+  },
+  {
+    "controller": "bookshelfController",
+    "base_expression": "ControllerConstant.PREFIX + \"bookshelf\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      }
+    ]
+  },
+  {
+    "controller": "HouseRegionController",
+    "base_expression": "ControllerConstant.PREFIX + \"houseRegion\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "HouseRegionManagerController",
+    "base_expression": "ControllerConstant.PREFIX + \"houseRegion/manager\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "count"
+      },
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      }
+    ]
+  },
+  {
+    "controller": "UserDetailsController",
+    "base_expression": "ControllerConstant.PREFIX + \"userDetails\"",
+    "routes": [
+      {
+        "method": "POST",
+        "suffix": "list"
+      },
+      {
+        "method": "POST",
+        "suffix": "get"
+      },
+      {
+        "method": "POST",
+        "suffix": "relateList"
+      },
+      {
+        "method": "POST",
+        "suffix": "create"
+      },
+      {
+        "method": "POST",
+        "suffix": "update"
+      },
+      {
+        "method": "POST",
+        "suffix": "delete"
+      },
+      {
+        "method": "POST",
+        "suffix": "page"
+      },
+      {
+        "method": "POST",
+        "suffix": "getID"
+      },
+      {
+        "method": "POST",
+        "suffix": "getEntity"
+      },
+      {
+        "method": "POST",
+        "suffix": "importExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "exportExcel"
+      },
+      {
+        "method": "POST",
+        "suffix": "count"
+      }
+    ]
+  }
+]

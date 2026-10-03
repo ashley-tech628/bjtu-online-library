@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <!--获取子系统名称作为日志目录和文件名 -->
+    <springProperty scope="context" name="springAppName" source="spring.application.name" />
+
+    <!-- name的值是变量的名称，value的值时变量定义的值。通过定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量。 -->
+    <!--定义日志文件的存储地址 -->
+    <property name="LOG_HOME" value="./logs/${springAppName}" />
+    <!--保留多少天的日志-->
+    <property name="LOG_HIS_MAX" value="60" />
+    <!--每个文件最多多大-->
+    <property name="FILE_SIZE_MAX" value="500MB" />
+    <!--文件最多多大-->
+    <property name="TOTAL_FILE_SIZE_MAX" value="10GB" />
+
+    <!-- 控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度 %msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 按照每天生成ERROR日志文件 -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文件的路径及文件名 -->
+        <file>${LOG_HOME}/error.log</file>
+        <!--日志文件输出格式-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${LOG_HOME}/error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!--每个文件最多多大-->
+            <maxFileSize>${FILE_SIZE_MAX}</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>${LOG_HIS_MAX}</maxHistory>
+            <!--每个文件最多FILE_SIZE_MAX，保留LOG_HIS_MAX天的历史记录，但最多TOTAL_FILE_SIZE_MAX-->
+            <totalSizeCap>${TOTAL_FILE_SIZE_MAX}</totalSizeCap>
+            <!--重启清理日志文件-->
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <!-- 此日志文件只记录ERROR日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 按照每天生成WARN日志文件 -->
+    <appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文件的路径及文件名 -->
+        <file>${LOG_HOME}/warn.log</file>
+        <!--日志文件输出格式-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${LOG_HOME}/warn-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!--每个文件最多多大-->
+            <maxFileSize>${FILE_SIZE_MAX}</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>${LOG_HIS_MAX}</maxHistory>
+            <!--每个文件最多FILE_SIZE_MAX，保留LOG_HIS_MAX天的历史记录，但最多TOTAL_FILE_SIZE_MAX-->
+            <totalSizeCap>${TOTAL_FILE_SIZE_MAX}</totalSizeCap>
+            <!--重启清理日志文件-->
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <!-- 此日志文件只记录WARN日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 按照每天生成INFO日志文件 -->
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文件的路径及文件名 -->
+        <file>${LOG_HOME}/info.log</file>
+        <!--日志文件输出格式-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${LOG_HOME}/info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!--每个文件最多多大-->
+            <maxFileSize>${FILE_SIZE_MAX}</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>${LOG_HIS_MAX}</maxHistory>
+            <!--每个文件最多FILE_SIZE_MAX，保留LOG_HIS_MAX天的历史记录，但最多TOTAL_FILE_SIZE_MAX-->
+            <totalSizeCap>${TOTAL_FILE_SIZE_MAX}</totalSizeCap>
+            <!--重启清理日志文件-->
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <!-- 此日志文件只记录INFO日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 按照每天生成DEBUG日志文件 -->
+    <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文件的路径及文件名 -->
+        <file>${LOG_HOME}/debug.log</file>
+        <!--日志文件输出格式-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${LOG_HOME}/debug-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!--每个文件最多多大-->
+            <maxFileSize>${FILE_SIZE_MAX}</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>${LOG_HIS_MAX}</maxHistory>
+            <!--每个文件最多FILE_SIZE_MAX，保留LOG_HIS_MAX天的历史记录，但最多TOTAL_FILE_SIZE_MAX-->
+            <totalSizeCap>${TOTAL_FILE_SIZE_MAX}</totalSizeCap>
+            <!--重启清理日志文件-->
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <!-- 此日志文件只记录DEBUG日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ERROR_FILE" />
+        <appender-ref ref="WARN_FILE" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="DEBUG_FILE" />
+    </root>
+
+</configuration>
